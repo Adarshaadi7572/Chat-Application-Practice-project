@@ -33,7 +33,7 @@ function CreateGroup(){
        Authorization: `Bearer ${userData.token}`,
      },
    };
-   axios.post("https://96e42177-e059-427f-8cd4-1f2c103f8c19-00-2nxrl19f3m7hh.sisko.replit.dev:5000/chat/createGroup", {name:groupName, users:[userData._id]},config).then((response) => {
+   axios.post("https://chat-application-bcckend.onrender.com/chat/createGroup", {name:groupName, users:[userData._id]},config).then((response) => {
      console.log("response after creating a group: ", response.data);
     
    }).catch((error) => {
