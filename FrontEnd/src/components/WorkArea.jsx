@@ -72,7 +72,7 @@ const sendMessage = () => {
       setAllMessages((prevMessages) => [...prevMessages, newMessage]);
      
     });
-  });
+  },[refreshkey]);
   
   // Fetch Chats on component load
   useEffect(() => {
