@@ -32,7 +32,7 @@ function User_Groups(){
       },
     };
   
-  axios.get("https://96e42177-e059-427f-8cd4-1f2c103f8c19-00-2nxrl19f3m7hh.sisko.replit.dev:5000/user/fetchUsers", config).then((data) => {
+  axios.get("https://chat-application-bcckend.onrender.com/user/fetchUsers", config).then((data) => {
     console.log("userData from API", data.data);
     setUsers(data.data);
   });
@@ -93,7 +93,7 @@ function User_Groups(){
                     },
                   };
                   axios.post(
-                    "https://96e42177-e059-427f-8cd4-1f2c103f8c19-00-2nxrl19f3m7hh.sisko.replit.dev:5000/chat/",
+                    "https://chat-application-bcckend.onrender.com/chat/",
                     {
                       userId: user._id,
                     },
