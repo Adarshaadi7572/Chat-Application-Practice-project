@@ -29,7 +29,7 @@ function Login() {
       };
         console.log(data);
       const response = await axios.post(
-       "https://96e42177-e059-427f-8cd4-1f2c103f8c19-00-2nxrl19f3m7hh.sisko.replit.dev:5000/user/login",
+       "https://chat-application-bcckend.onrender.com/user/login",
         data,
         config
       );
@@ -63,7 +63,7 @@ function Login() {
         }
       };
      console.log(data);
-      const response = await axios.post('https://96e42177-e059-427f-8cd4-1f2c103f8c19-00-2nxrl19f3m7hh.sisko.replit.dev:5000/user/signup', data, config);
+      const response = await axios.post('https://chat-application-bcckend.onrender.com/user/signup', data, config);
       
       console.log('SignUp Response:', response);
       setSignInStatus({ msg: 'success', key: Math.random() });
