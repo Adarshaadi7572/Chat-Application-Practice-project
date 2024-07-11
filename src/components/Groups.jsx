@@ -31,7 +31,7 @@ function Groups(){
         Authorization: `Bearer ${userData.token}`
       },
     };
-    axios.get("https://96e42177-e059-427f-8cd4-1f2c103f8c19-00-2nxrl19f3m7hh.sisko.replit.dev:5000/chat/fetchGroups", config).then((response) => {
+    axios.get("https://chat-application-bcckend.onrender.com/chat/fetchGroups", config).then((response) => {
       setGroups(response.data);
     });
   }, [refresh]);
@@ -72,7 +72,7 @@ function Groups(){
                   },
                 };
                 axios.put(
-                  "https://96e42177-e059-427f-8cd4-1f2c103f8c19-00-2nxrl19f3m7hh.sisko.replit.dev:5000/chat/addSelfToGroup",
+                  "https://chat-application-bcckend.onrender.com/chat/addSelfToGroup",
                   {
                     chatId: group._id,
                     userId:userData._id
