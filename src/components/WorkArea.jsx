@@ -13,7 +13,7 @@ import { myContext } from "./MainContainer";
 import { refreshSidebarFun } from "../Features/refreshSidebar";
 
 const WorkArea = () => {
-  const ENDPOINT = "https://96e42177-e059-427f-8cd4-1f2c103f8c19-00-2nxrl19f3m7hh.sisko.replit.dev:5000"; // Update with your server endpoint
+  const ENDPOINT = "https://chat-application-bcckend.onrender.com"; // Update with your server endpoint
   const lightTheme = useSelector((state) => state.themeKey);
   const [messageContent, setMessageContent] = useState('');
   const messagesEndRef = useRef(null);
@@ -30,7 +30,7 @@ const WorkArea = () => {
   const [socketConnectionStatus, setConnectionStatus] = useState(false); // Define socket state
    const refreshkey = useSelector((state) => state.refreshKey);
   // Function to send message
-    const socket = io("https://96e42177-e059-427f-8cd4-1f2c103f8c19-00-2nxrl19f3m7hh.sisko.replit.dev:5000");
+    const socket = io("https://chat-application-bcckend.onrender.com");
 const sendMessage = () => {
    
     console.log("messageConent" , messageContent);
@@ -42,7 +42,7 @@ const sendMessage = () => {
       },
     };
 
-    axios.post("https://96e42177-e059-427f-8cd4-1f2c103f8c19-00-2nxrl19f3m7hh.sisko.replit.dev:5000/message/", {
+    axios.post("https://chat-application-bcckend.onrender.com/message/", {
       content:messageContent,
       chatId:chat_id,
     }, config)
@@ -83,7 +83,7 @@ const sendMessage = () => {
       },
     };
 
-    axios.get(`https://96e42177-e059-427f-8cd4-1f2c103f8c19-00-2nxrl19f3m7hh.sisko.replit.dev:5000/message/`+chat_id, config)
+    axios.get(`https://chat-application-bcckend.onrender.com/message/`+chat_id, config)
       .then(({ data }) => {
         console.log("data", data);
         setAllMessages(data);
