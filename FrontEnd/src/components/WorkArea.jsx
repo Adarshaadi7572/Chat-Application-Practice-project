@@ -132,7 +132,7 @@ const sendMessage = () => {
         </IconButton>
       </div>
 
-      <div className={`messages-container ${lightTheme ? 'bg-white' : 'bg-[#2d3941]'}`}>
+      <div className={`messages-container ${lightTheme ? 'bg-white' : 'dark'}`}>
         {allMessages.slice(0).reverse().map((message, index) => {
           const sender = message.sender;
           const self_id = userData._id;
@@ -145,10 +145,10 @@ const sendMessage = () => {
         })}
       </div>
 
-      <div className={`text-input-area ${lightTheme ? 'bg-white' : 'bg-[#2d3941]'}`}>
+      <div className={`text-input-area ${lightTheme ? 'bg-white' : 'dark'}`}>
         <input
           placeholder='Type a message'
-          className={`search-box ${lightTheme ? 'bg-white text-black' : 'bg-[#2d3941] text-white'}`}
+          className={`search-box ${lightTheme ? 'bg-white text-black' : 'dark text-white'}`}
           value={messageContent}
           onChange={(e) => setMessageContent(e.target.value)}
           onKeyDown={(e) => {
@@ -160,7 +160,7 @@ const sendMessage = () => {
           }}
         />
         <IconButton
-          className={`icon ${lightTheme ? "" : ""}`}
+          className={`icon ${lightTheme ? "" : "dark"}`}
           onClick={() => {
             sendMessage();
             setMessageContent('');

@@ -14,7 +14,7 @@ const MainContainer = () => {
    const dispatch = useDispatch();
   const [refresh, setRefresh] = useState(true);
   return(
-    <div className={"bg-[#f4f5f8] h-[90vh] w-[90vw] flex " + (lightTheme ? "" : " dark")}>
+    <div className={"bg-[#f4f5f8] h-[90vh] w-[90vw] rounded-2xl flex " + (lightTheme ? "" : " dark")}>
       <myContext.Provider value={{ refresh: refresh, setRefresh: setRefresh }}>
         <Sidebar />
         <Outlet />

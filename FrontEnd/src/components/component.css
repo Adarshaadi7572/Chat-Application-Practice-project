@@ -115,7 +115,7 @@ input:focus {
   grid-area: 1/2/2/4;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.54);
+  color: black;
   text-transform: capitalize;
 }
 
@@ -155,7 +155,7 @@ input:focus {
 
 .chatArea-Header{
   display:flex;
-  align-itmes:center;
+  align-items:center;
   gap:10px;
 
   padding:10px 10px;

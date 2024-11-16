@@ -2,7 +2,7 @@ import { Alert, IconButton, Snackbar } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import React from 'react';
 
-function Toaster({ message }) {
+function Toaster({ key, message }) {
   const [open, setOpen] = React.useState(true);
 
   function handleClose(event, reason) {
